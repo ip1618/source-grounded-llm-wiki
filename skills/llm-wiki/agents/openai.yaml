@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Wiki"
+  short_description: "Maintain a cited, source-grounded wiki"
+  default_prompt: "Use $llm-wiki to add these sources to a persistent Markdown wiki while keeping evidence, analysis, and disagreements clear."

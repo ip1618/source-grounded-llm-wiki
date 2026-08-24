@@ -51,31 +51,38 @@ The skill folder contains only files needed by the agent. Publication and instal
 
 ## Installation
 
-### Codex personal installation
+### Recommended: Skills CLI
 
-First check whether `~/.codex/skills/llm-wiki` already exists. The installed name is shared by other community skills, so do not overwrite an existing folder until you have reviewed and backed it up.
-
-If the name is available, copy the skill folder into your personal Codex skills directory:
+Use the open-source [Vercel Labs Skills CLI](https://github.com/vercel-labs/skills) to detect supported agents and install the skill for the current project:
 
 ```bash
-cp -R skills/llm-wiki ~/.codex/skills/llm-wiki
+npx skills add https://github.com/ip1618/source-grounded-llm-wiki --skill llm-wiki
 ```
 
-Restart Codex or begin a new task if the skill does not appear immediately.
-
-### Agent Skills-compatible installer
-
-You can also use the community [Vercel Labs Skills CLI](https://github.com/vercel-labs/skills). From the root of a checked-out copy of this repository, run:
+Choose an agent explicitly when needed:
 
 ```bash
-npx skills add . --skill llm-wiki
+# Claude Code
+npx skills add https://github.com/ip1618/source-grounded-llm-wiki --skill llm-wiki -a claude-code
+
+# OpenCode
+npx skills add https://github.com/ip1618/source-grounded-llm-wiki --skill llm-wiki -a opencode
+
+# Codex
+npx skills add https://github.com/ip1618/source-grounded-llm-wiki --skill llm-wiki -a codex
 ```
 
-Installer options and destination paths can change, so review the CLI's current documentation and preview the resulting files. Do not replace an existing `llm-wiki` skill without comparing it and making a backup.
+Add `-g` to install for that agent across projects instead of only in the current project. The CLI also supports other Agent Skills-compatible tools; consult its current supported-agent list for their names and paths.
 
-### Manual project installation
+Before installing, check whether a skill named `llm-wiki` already exists for the selected agent. Review and back up an existing folder rather than overwriting an unrelated community skill.
 
-For agents that discover project-local skills, copy `skills/llm-wiki` into the skill directory supported by that agent. Consult the agent's current documentation for its discovery path.
+### Manual installation
+
+Copy `skills/llm-wiki` into the project or personal skill directory supported by your agent. Agent-specific locations differ, so consult that agent's current documentation before copying files.
+
+### Compatibility note
+
+The portable skill is defined by `SKILL.md` and the files under `references/`. The optional `agents/openai.yaml` file adds display metadata for Codex and other OpenAI interfaces; Claude Code, OpenCode, and other agents can ignore it. It does not change the wiki workflow.
 
 ## Example prompts
 

@@ -1,5 +1,7 @@
 # LLM Wiki skill review — 9 October 2026
 
+> **Historical document:** This file records an earlier review. For active guidance, see the [current skill instructions](../../skills/llm-wiki/SKILL.md).
+
 **Recommendation: keep the design, shorten repeated guidance, and show the generated content.** The package is small and the evidence rules are useful. The main issue is that it explains its process much more clearly than its output. It also repeatedly loads rules that have already been stated.
 
 This review inspected all eight original repository files, delegated five independent public-repository comparisons, and ran one isolated mixed-source forward test. Existing skill and publication files were not changed. This review folder contains only review evidence and a synthetic example; it is outside the installable skill.

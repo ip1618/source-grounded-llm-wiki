@@ -1,5 +1,7 @@
 # Skill review: scope, operations, and one project example
 
+> **Historical document:** This file records an earlier discussion and proposed changes. For active guidance, see the [current skill instructions](../../skills/llm-wiki/SKILL.md).
+
 **Agreed direction:** keep the source-grounded wiki workflow. Improve completeness, readability, page boundaries, and connected updates.
 
 This records the corrected discussion, replacing the earlier overly broad proposal. These are proposed changes for discussion, not authorization to implement them. The operation descriptions below explain the baseline and proposed behavior.

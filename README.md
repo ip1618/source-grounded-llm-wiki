@@ -6,6 +6,8 @@ The installed skill is named `llm-wiki`. It turns useful information from your s
 
 Sources are records of what their authors said, not guaranteed truth. When sources disagree, the skill compares their dates, definitions, scope, units, and methods. A disagreement may remain open, become explained, be resolved by later evidence, or be kept only as useful history.
 
+For a project wiki, it can use relevant session history, designs, documents, and repository evidence to recover context. It preserves supported requirements, decisions and reasons, keeps readable explanations connected to selected code paths and functions, and updates related topics as the project changes. Missing context remains unknown; proposals, agreements, implementation, and verification stay distinct.
+
 ## Why this exists
 
 Ordinary document chat often retrieves passages and rebuilds an answer for every question. An LLM wiki keeps a maintained layer of Markdown pages between the sources and the conversation. As new sources are added, the wiki's summaries and links can improve. Disagreements may be discovered, explained, or resolved over time.
@@ -84,26 +86,30 @@ Copy `skills/llm-wiki` into the project or personal skill directory supported by
 
 The portable skill is defined by `SKILL.md` and the files under `references/`. The optional `agents/openai.yaml` file adds display metadata for Codex and other OpenAI interfaces; Claude Code, OpenCode, and other agents can ignore it. It does not change the wiki workflow.
 
+Keep one shared skill and reference set. Follow each agent's applicable project instructions and use the history/delegation capabilities available there; disclose gaps when a capability or record is unavailable. Add agent-specific configuration only for an actual requirement. A shared format does not guarantee identical behavior; see [VALIDATION.md](VALIDATION.md) for the runtimes and scenarios actually checked.
+
 ## Example prompts
 
+Invoke the skill with `$llm-wiki` in Codex or `/llm-wiki` in [Claude Code](https://code.claude.com/docs/en/skills). Use the following requests after selecting the skill, or name it in ordinary language:
+
 ```text
-Use $llm-wiki to create a source-grounded research wiki for this folder.
+Use the llm-wiki skill to create a source-grounded research wiki for this folder.
 ```
 
 ```text
-Use $llm-wiki to add this report and update only the related pages.
+Use the llm-wiki skill to add this report and update only the related pages.
 ```
 
 ```text
-Use $llm-wiki to compare this new source with the wiki's existing claims.
+Use the llm-wiki skill to compare this new source with the wiki's existing claims.
 ```
 
 ```text
-Use $llm-wiki to answer this question and cite the underlying sources.
+Use the llm-wiki skill to answer this question and cite the underlying sources.
 ```
 
 ```text
-Use $llm-wiki to check the wiki for weak citations, unresolved disagreements, broken links, possible outdated claims, and hard-to-find pages.
+Use the llm-wiki skill to check the wiki for weak citations, unresolved disagreements, broken links, possible outdated claims, and hard-to-find pages.
 ```
 
 ## Complete example
@@ -130,12 +136,14 @@ wiki/
 
 The skill preserves usable existing conventions instead of forcing this layout on every project.
 
+Page boundaries follow meaning and usefulness, not line counts. A short core concept can have its own page immediately when it has a distinct role. New features update the relevant topics and relationships rather than generating another document set. Keep current explanations at stable paths and retain meaningful history. Maintain one current skill implementation; use Git history and release tags for skill versions instead of competing copies per agent.
+
 ## What this skill does not do
 
 - It does not replace a vector database or large-scale search system.
 - It does not assume that a cited source is true or automatically decide which disagreeing source is correct.
 - It does not treat generated answers as original evidence.
-- It does not serve as a coding-session checkpoint or conversational memory tool.
+- It does not serve as a standalone coding-session checkpoint or general personal-memory tool. Reviewing session history for project context is supported.
 - It does not require Obsidian, YAML frontmatter, a graph database, or a special application.
 
 ## Name conflicts
@@ -144,7 +152,7 @@ The repository name is `source-grounded-llm-wiki`, while the installed skill nam
 
 ## Validation
 
-The `v0.1.0-beta` candidate has completed the forward tests below. See [VALIDATION.md](VALIDATION.md) for the tested scenarios, results, and limits.
+The original `v0.1.0-beta` candidate completed its recorded forward tests. These are historical results, not automatic validation of later instruction changes. See [VALIDATION.md](VALIDATION.md) for tested scenarios, current revision checks, and limits.
 
 Before publishing a release:
 

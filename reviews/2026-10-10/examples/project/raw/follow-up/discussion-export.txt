@@ -1,0 +1,26 @@
+SYNTHETIC FOLLOW-UP DISCUSSION EXPORT — fictional team and project
+Available window: 2026-08-19 09:12–09:48. This is a subsequent discussion about the earlier billing helper.
+
+[2026-08-19 09:12] Mira (product lead)
+Some invoice drafts need a goodwill discount. Could we support a percentage on each service row and also a fixed discount for the whole invoice?
+
+[2026-08-19 09:16] Dev (engineer)
+Both are possible, but together they need rules for stacking and rounding. For this small change I propose only a fixed invoice discount in cents. Subtract it from the subtotal before calculating tax. Preserve the original subtotal in the result and add discount_cents and taxable_cents so the UI can show what happened. Reject a discount below zero or above the subtotal.
+
+[2026-08-19 09:20] Mira
+Agreed to fixed invoice discount only, deducted before tax, with those amount fields and invalid-range rejection. Keep zero as the default so existing callers get their earlier result amounts. Percentage discounts and combining discounts are proposals for later; we have not approved them.
+
+[2026-08-19 09:26] Dev
+I considered switching to banker's rounding at the same time, but that would change some half-cent totals. I recommend keeping the current halves-up tax rule.
+
+[2026-08-19 09:29] Mira
+Keep the agreed tax rounding. Do not change rounding in this feature.
+
+[2026-08-19 09:35] Dev
+I've supplied a patch against the earlier billing.py. For a 10,000-cent subtotal, a 1,000-cent discount and 1,000 basis points of tax, the arithmetic is taxable 9,000, tax 900, total 9,900 cents. That is a worked example, not a test execution result. I have not applied or run the patch in the supplied checkout.
+
+[2026-08-19 09:42] Anika (designer)
+I can add a discount row later. We still need to choose whether its label is "Goodwill adjustment" or "Discount". The old sketch has no discount row and the publishing wording is still unresolved.
+
+[2026-08-19 09:48] Mira
+Calculation scope is agreed as above. The field label remains open, and nobody has approved sending or publishing from the editor. We have no deployment or runtime evidence for this patch.

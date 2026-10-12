@@ -1,0 +1,108 @@
+{
+  "root": "/private/tmp/llm-wiki-forward-mixed-20261009",
+  "raw_before": {
+    "raw/customer-interviews.md": "c130f4bc275480d32b91c77c573222912859118b6b5224044beb02bff2fed5b4",
+    "raw/product-export-proposal.md": "290b4a106cd1d8c908aa176b1a4231b643f77a1423f686cedf11d3dde29b9ee1",
+    "raw/usage-export-note.md": "021f25e6872e076717b66dc5fee6a3f0d345ba80073f94298bd4b39fb99af3c4"
+  },
+  "initial_log": "# Activity log\n\n- 2026-10-09 \u2014 Initialized a small wiki for three synthetic evaluation fixtures.\n",
+  "raw_after_write": {
+    "raw/customer-interviews.md": "c130f4bc275480d32b91c77c573222912859118b6b5224044beb02bff2fed5b4",
+    "raw/product-export-proposal.md": "290b4a106cd1d8c908aa176b1a4231b643f77a1423f686cedf11d3dde29b9ee1",
+    "raw/usage-export-note.md": "021f25e6872e076717b66dc5fee6a3f0d345ba80073f94298bd4b39fb99af3c4"
+  },
+  "raw_preserved_after_write": true,
+  "log_initial_prefix_preserved": true,
+  "relative_links_checked": 16,
+  "link_errors": [],
+  "before_query": {
+    "raw/customer-interviews.md": {
+      "sha256": "c130f4bc275480d32b91c77c573222912859118b6b5224044beb02bff2fed5b4",
+      "size": 635,
+      "mtime_ns": 1791554994886478901
+    },
+    "raw/product-export-proposal.md": {
+      "sha256": "290b4a106cd1d8c908aa176b1a4231b643f77a1423f686cedf11d3dde29b9ee1",
+      "size": 610,
+      "mtime_ns": 1791554994886370193
+    },
+    "raw/usage-export-note.md": {
+      "sha256": "021f25e6872e076717b66dc5fee6a3f0d345ba80073f94298bd4b39fb99af3c4",
+      "size": 883,
+      "mtime_ns": 1791554994886563276
+    },
+    "wiki/export-demand.md": {
+      "sha256": "a29bcc2dbe5592d906f524164e7d78bb2fcb4fa8b3b9a1fb7c07a6ead4c5e8d6",
+      "size": 3052,
+      "mtime_ns": 1791555051919480342
+    },
+    "wiki/index.md": {
+      "sha256": "398b360afaefc7de6c5d9e364b65a9e39dd9dec3a06436c316fd249de063d848",
+      "size": 302,
+      "mtime_ns": 1791555034365084323
+    },
+    "wiki/log.md": {
+      "sha256": "a6ae23df7974b82916734d927560fd2597f7ea9771b1f1ed1f7d83dddd9d9aa5",
+      "size": 797,
+      "mtime_ns": 1791555034365197114
+    },
+    "wiki/schema.md": {
+      "sha256": "b862ef03890ef8a527dc351c0afdd912f6055c0c51852ed4521d2d335b732af8",
+      "size": 754,
+      "mtime_ns": 1791554994886736400
+    }
+  },
+  "inventory": {
+    "raw/customer-interviews.md": 635,
+    "raw/product-export-proposal.md": 610,
+    "raw/usage-export-note.md": 883,
+    "wiki/export-demand.md": 3052,
+    "wiki/index.md": 302,
+    "wiki/log.md": 797,
+    "wiki/schema.md": 754
+  },
+  "after_query": {
+    "raw/customer-interviews.md": {
+      "sha256": "c130f4bc275480d32b91c77c573222912859118b6b5224044beb02bff2fed5b4",
+      "size": 635,
+      "mtime_ns": 1791554994886478901
+    },
+    "raw/product-export-proposal.md": {
+      "sha256": "290b4a106cd1d8c908aa176b1a4231b643f77a1423f686cedf11d3dde29b9ee1",
+      "size": 610,
+      "mtime_ns": 1791554994886370193
+    },
+    "raw/usage-export-note.md": {
+      "sha256": "021f25e6872e076717b66dc5fee6a3f0d345ba80073f94298bd4b39fb99af3c4",
+      "size": 883,
+      "mtime_ns": 1791554994886563276
+    },
+    "wiki/export-demand.md": {
+      "sha256": "a29bcc2dbe5592d906f524164e7d78bb2fcb4fa8b3b9a1fb7c07a6ead4c5e8d6",
+      "size": 3052,
+      "mtime_ns": 1791555051919480342
+    },
+    "wiki/index.md": {
+      "sha256": "398b360afaefc7de6c5d9e364b65a9e39dd9dec3a06436c316fd249de063d848",
+      "size": 302,
+      "mtime_ns": 1791555034365084323
+    },
+    "wiki/log.md": {
+      "sha256": "a6ae23df7974b82916734d927560fd2597f7ea9771b1f1ed1f7d83dddd9d9aa5",
+      "size": 797,
+      "mtime_ns": 1791555034365197114
+    },
+    "wiki/schema.md": {
+      "sha256": "b862ef03890ef8a527dc351c0afdd912f6055c0c51852ed4521d2d335b732af8",
+      "size": 754,
+      "mtime_ns": 1791554994886736400
+    }
+  },
+  "query_read_only": true,
+  "raw_after_query": {
+    "raw/customer-interviews.md": "c130f4bc275480d32b91c77c573222912859118b6b5224044beb02bff2fed5b4",
+    "raw/product-export-proposal.md": "290b4a106cd1d8c908aa176b1a4231b643f77a1423f686cedf11d3dde29b9ee1",
+    "raw/usage-export-note.md": "021f25e6872e076717b66dc5fee6a3f0d345ba80073f94298bd4b39fb99af3c4"
+  },
+  "raw_preserved_after_query": true
+}

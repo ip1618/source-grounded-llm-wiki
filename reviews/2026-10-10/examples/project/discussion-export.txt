@@ -1,0 +1,37 @@
+SYNTHETIC DISCUSSION EXPORT — fictional team and project
+Export supplied by Mira, product lead, 2026-08-12.
+Available window: 2026-08-06 10:18–11:04. The export begins midway through the thread.
+The messages before 10:18 were not included. Attachments referenced in those earlier messages are also missing. We do not have a record of the earlier alternatives or who approved them.
+
+[2026-08-06 10:18] Mira (product lead)
+Picking up from the call: LedgerLane should let our operations staff turn an agreed list of services into a clear invoice without retyping prices from a spreadsheet. Customers should understand what they are being charged for. This first prototype is for preparing the invoice; sending it to a customer is a later step.
+
+[2026-08-06 10:22] Dev (engineer)
+I see three pieces. Billing calculates the amounts and will eventually hold invoice state. Profile access decides which company members can read a customer profile. Masterdata owns the service catalog and its default prices so an editor can choose an existing service. The tiny code I can share today only does the invoice calculation, a company-id access check, and a hard-coded catalog.
+
+[2026-08-06 10:25] Mira
+Yes to those responsibilities. Shared company access is the rule: a signed-in member may view profiles belonging to their own company. They must not read another company's profiles. We have not settled who can edit or delete a shared profile. Do not assume that everyone who can read can edit.
+
+[2026-08-06 10:29] Dev
+For money I recommend storing cents as integers. With binary floating-point, ordinary decimal prices can produce small representation differences, which makes totals and reconciliation harder to explain. Cents also match the precision of the amounts we currently need. Tax can stay in basis points, where 100 basis points is 1 percent, and we can round the tax amount once to the nearest cent, with halves rounded up.
+
+[2026-08-06 10:32] Mira
+Agreed: integer cents and that tax rounding rule for this prototype. Our current catalog prices fit whole cents. We should revisit this if we later support currencies or units that need a different precision.
+
+[2026-08-06 10:36] Dev
+Another option is to duplicate a private service catalog for every staff member so nobody shares price changes.
+
+[2026-08-06 10:39] Mira
+Let's reject private catalogs. Staff preparing the same company's invoices need the same service names and defaults. Copying them per person would create diverging prices and repeated maintenance. A shared company catalog is the direction. We still need an editing policy and a storage design; the static catalog does not establish either.
+
+[2026-08-06 10:46] Anika (designer)
+I'm supplying the invoice editor sketch separately after this chat. The button currently says "Publish invoice" as a layout placeholder. Does that mean make a saved invoice visible to colleagues, or send it to the customer? The words will change depending on the answer.
+
+[2026-08-06 10:50] Mira
+Leave that wording open. Preparing an invoice is agreed, but the audience and exact action for that button are not. The sketch's label should not be treated as an approved sending flow.
+
+[2026-08-06 10:57] Dev
+The Python helper can calculate subtotal, tax, and total. It doesn't save an invoice or enforce login. The profile helper is not attached to an endpoint. There are no automated tests or deployment results in this bundle.
+
+[2026-08-06 11:04] Mira
+Understood. Please keep the sketch with the materials so we can discuss the layout. I haven't signed off the publishing action or wording.

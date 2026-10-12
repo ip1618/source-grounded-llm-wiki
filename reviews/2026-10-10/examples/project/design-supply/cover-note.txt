@@ -1,0 +1,5 @@
+SYNTHETIC DESIGN DELIVERY — fictional project
+From: Anika, designer
+Date: 2026-08-07
+
+This invoice editor sketch was supplied separately from the discussion export. It is a static composition, not a working interface. Service prices and customer names are fictional examples. "Publish invoice" is a placeholder from the design; the product lead has not approved the action or its wording. The sketch includes a customer selector, service rows, totals, and a draft-saving button. No persistence, access control, sending, or publishing behavior is demonstrated by the image.

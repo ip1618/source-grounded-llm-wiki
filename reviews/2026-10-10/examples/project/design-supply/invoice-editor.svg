@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+  <rect width="1100" height="760" fill="#f1f3f5"/>
+  <rect width="220" height="760" fill="#172839"/>
+  <g font-family="Arial, sans-serif">
+    <text x="28" y="58" fill="#ffffff" font-size="25" font-weight="700">LedgerLane</text>
+    <text x="28" y="133" fill="#ffffff" font-size="18">Invoices</text>
+    <text x="28" y="182" fill="#b8c4cf" font-size="18">Profiles</text>
+    <text x="28" y="231" fill="#b8c4cf" font-size="18">Service catalog</text>
+    <text x="264" y="61" fill="#172839" font-size="29" font-weight="700">Prepare invoice</text>
+    <text x="264" y="90" fill="#52616d" font-size="15">Static layout sketch · synthetic examples</text>
+    <rect x="260" y="118" width="795" height="546" rx="12" fill="#ffffff"/>
+    <text x="290" y="157" fill="#52616d" font-size="15">Customer</text>
+    <rect x="290" y="173" width="430" height="49" rx="6" fill="#f5f7f8" stroke="#cbd2d8"/>
+    <text x="307" y="204" fill="#172839" font-size="17">North Harbor Ops</text>
+    <text x="290" y="276" fill="#52616d" font-size="14">SERVICE</text>
+    <text x="720" y="276" fill="#52616d" font-size="14">QTY</text>
+    <text x="906" y="276" fill="#52616d" font-size="14">AMOUNT</text>
+    <line x1="290" y1="291" x2="1025" y2="291" stroke="#dce1e5"/>
+    <text x="290" y="328" fill="#172839" font-size="17">Site visit</text>
+    <text x="730" y="328" fill="#172839" font-size="17">1</text>
+    <text x="930" y="328" fill="#172839" font-size="17">$75.00</text>
+    <text x="290" y="379" fill="#172839" font-size="17">Document review</text>
+    <text x="730" y="379" fill="#172839" font-size="17">2</text>
+    <text x="930" y="379" fill="#172839" font-size="17">$84.00</text>
+    <line x1="290" y1="405" x2="1025" y2="405" stroke="#dce1e5"/>
+    <text x="749" y="449" fill="#52616d" font-size="17">Subtotal</text>
+    <text x="920" y="449" fill="#172839" font-size="17">$159.00</text>
+    <text x="749" y="490" fill="#52616d" font-size="17">Tax (10%)</text>
+    <text x="930" y="490" fill="#172839" font-size="17">$15.90</text>
+    <text x="749" y="535" fill="#172839" font-size="20" font-weight="700">Total</text>
+    <text x="913" y="535" fill="#172839" font-size="20" font-weight="700">$174.90</text>
+    <rect x="656" y="585" width="164" height="48" rx="6" fill="#ffffff" stroke="#a8b3bd"/>
+    <text x="689" y="615" fill="#172839" font-size="16">Save draft</text>
+    <rect x="836" y="585" width="188" height="48" rx="6" fill="#1b5f73"/>
+    <text x="857" y="615" fill="#ffffff" font-size="16">Publish invoice</text>
+    <text x="264" y="712" fill="#52616d" font-size="15">Button wording and audience remain under discussion.</text>
+  </g>
+</svg>

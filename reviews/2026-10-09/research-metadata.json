@@ -1,0 +1,53 @@
+{
+  "local_reviewed_commit": "a4996afa5e2e540a9beaaf41bc20e72256fc4348",
+  "repository_search": {
+    "query": "skills in:name,description stars:>50000 archived:false",
+    "sort": "stars",
+    "order": "desc",
+    "checked_at_utc": "2026-10-09T14:08:46.873549+00:00",
+    "total_count": 25
+  },
+  "reviewed_public_repositories": [
+    {
+      "repo": "obra/superpowers",
+      "stars": 296785,
+      "branch": "main",
+      "commit": "8ca22dba9a94f28898bbce59f2537ff4d87c747d",
+      "fetched_at_utc": "2026-10-09T14:08:44.222991+00:00",
+      "tree_truncated": false
+    },
+    {
+      "repo": "mattpocock/skills",
+      "stars": 282109,
+      "branch": "main",
+      "commit": "49dd158d1076134a641b33efb035946536778336",
+      "fetched_at_utc": "2026-10-09T14:08:45.679945+00:00",
+      "tree_truncated": false
+    },
+    {
+      "repo": "affaan-m/ECC",
+      "stars": 275713,
+      "branch": "main",
+      "commit": "ef648e01899ba3e8dc6371642deaaf64b4477775",
+      "fetched_at_utc": "2026-10-09T14:08:40.500856+00:00",
+      "tree_truncated": false
+    },
+    {
+      "repo": "multica-ai/andrej-karpathy-skills",
+      "stars": 217649,
+      "branch": "main",
+      "commit": "2c606141936f1eeef17fa3043a72095b4765b9c2",
+      "fetched_at_utc": "2026-10-09T14:08:43.816069+00:00",
+      "tree_truncated": false
+    },
+    {
+      "repo": "anthropics/skills",
+      "stars": 180112,
+      "branch": "main",
+      "commit": "9d630808e4add0a7146de4af9384155d5dee350a",
+      "fetched_at_utc": "2026-10-09T14:08:40.719373+00:00",
+      "tree_truncated": false
+    }
+  ],
+  "scope": "Five highest-star repositories returned by this search, representative actual skills inspected; not a universal ranking of individual skills."
+}

@@ -1,0 +1,14 @@
+{
+  "name": "llm-wiki-desktop-test",
+  "description": "Disposable desktop update test marketplace.",
+  "owner": {
+    "name": "ip1618"
+  },
+  "plugins": [
+    {
+      "name": "llm-wiki-desktop-test",
+      "source": "./",
+      "description": "Disposable desktop update test for LLM Wiki."
+    }
+  ]
+}

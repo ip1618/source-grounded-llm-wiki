@@ -1,0 +1,9 @@
+{
+  "name": "llm-wiki-desktop-test",
+  "version": "0.1.0-test.a",
+  "description": "Disposable desktop update test for LLM Wiki.",
+  "author": {
+    "name": "ip1618"
+  },
+  "skills": "./skills/"
+}

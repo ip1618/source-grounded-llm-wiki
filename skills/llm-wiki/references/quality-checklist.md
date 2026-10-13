@@ -17,6 +17,7 @@ Use the relevant sections before finishing.
 - Did I append rather than rewrite the log?
 - Did I avoid unrelated churn?
 - Is the explanation clear, with selected code references supporting rather than interrupting it?
+- Does each section add useful local context? Are shared details linked to their owning explanation, with repeated wording or status disclaimers removed unless needed to prevent misunderstanding?
 - Are business/technical/UI context and decision/execution status supported, without invented detail or approval?
 
 ## Adding sources and comparing claims

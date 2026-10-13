@@ -28,23 +28,39 @@ Browse the saved fictional examples:
 
 ## Installation
 
-Use the [Skills CLI](https://github.com/vercel-labs/skills) to install for the current project:
+Use the native plugin for Codex or Claude Code. Both use the same skill folder. In a desktop app, you can ask your agent to run the one-time setup commands below if the matching CLI is installed. Reopen the app afterward.
+
+**Codex**
+
+```bash
+codex plugin marketplace add ip1618/source-grounded-llm-wiki
+codex plugin add llm-wiki@source-grounded-llm-wiki
+```
+
+**Claude Code**
+
+```bash
+claude plugin marketplace add ip1618/source-grounded-llm-wiki
+claude plugin install llm-wiki@source-grounded-llm-wiki
+```
+
+For other agents, use the [Skills CLI](https://github.com/vercel-labs/skills):
 
 ```bash
 npx skills add https://github.com/ip1618/source-grounded-llm-wiki --skill llm-wiki
 ```
 
-To choose an agent, append one of these options:
-
-| Agent | Option |
-|---|---|
-| Claude Code | `-a claude-code` |
-| OpenCode | `-a opencode` |
-| Codex | `-a codex` |
-
-Add `-g` to install across projects. Check for an existing skill named `llm-wiki` before installing, and back it up rather than overwriting an unrelated skill.
+Append `-a opencode`, `-a codex`, or `-a claude-code` to choose an agent, and `-g` to install across projects. Check for an existing skill named `llm-wiki` before installing, and back up an unrelated skill rather than overwriting it.
 
 For manual installation, copy [skills/llm-wiki](skills/llm-wiki) into the skill directory supported by your agent. Consult that agent's documentation for the correct location.
+
+## Plugin updates
+
+- **Codex:** the Git-backed plugin automatically downloaded a new release and loaded it after quitting and reopening the app in our test.
+- **Claude Code:** [enable marketplace auto-update](https://code.claude.com/docs/en/plugins/host-marketplace#turn-on-auto-update) under `/plugin` → Marketplaces. In our desktop test, the plugin downloaded a new release in the background and loaded it in a fresh local Code session.
+- **Skills CLI or manual copies:** these do not use the plugin update mechanism. Update them through the installer or replace the copied folder.
+
+Maintainers publish a release by changing the version in [.claude-plugin/plugin.json](.claude-plugin/plugin.json) and pushing the updated package. See [VALIDATION.md](VALIDATION.md) for the tested versions and limits.
 
 ## Usage
 
@@ -87,11 +103,12 @@ For example: discuss billing rules, capture the decision and its reason, connect
 | [SKILL.md](skills/llm-wiki/SKILL.md) | Current agent instructions |
 | [Wiki conventions](skills/llm-wiki/references/wiki-conventions.md) and [quality checklist](skills/llm-wiki/references/quality-checklist.md) | Supporting guidance used when relevant |
 | [agents/openai.yaml](skills/llm-wiki/agents/openai.yaml) | Optional display metadata for OpenAI interfaces |
+| [.claude-plugin/](.claude-plugin/) | Shared plugin manifest, release version, and marketplace catalog |
 | [reviews/](reviews/) | Historical reviews, proposals, and fictional test examples with their evidence |
 
-Only `skills/llm-wiki/` is the skill package. The review material is not installed with it.
+`skills/llm-wiki/` contains the shared skill instructions and supporting files. The Skills CLI installs that folder. A plugin install can also download repository files, including reviews; those reviews are not skill instructions or required references.
 
-**Status: beta.** The recorded checks used Codex and small fictional examples. Claude Code and OpenCode runtime behavior, and use on large production wikis, remain untested. Shared instructions do not guarantee identical behavior across agents. See [VALIDATION.md](VALIDATION.md) for the checks and limits.
+**Status: beta.** Plugin discovery and automatic download/activation passed focused tests in Codex and Claude desktop. Small fictional wiki workflows also completed in both apps: creation, feature updates, review and repair, and read-only questions. Initial outputs needed content corrections; independent reviews confirmed the repairs. OpenCode runtime behavior and large production wikis remain unverified. See [VALIDATION.md](VALIDATION.md) for the checks and limits.
 
 Inspired by [Andrej Karpathy's LLM Wiki idea](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). This is an independent community implementation, with no affiliation or endorsement from Karpathy or agent providers.
 

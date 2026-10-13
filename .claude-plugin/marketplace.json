@@ -1,0 +1,14 @@
+{
+  "name": "source-grounded-llm-wiki",
+  "description": "The LLM Wiki skill marketplace.",
+  "owner": {
+    "name": "ip1618"
+  },
+  "plugins": [
+    {
+      "name": "llm-wiki",
+      "source": "./",
+      "description": "Maintain a source-grounded Markdown wiki from project discussions, designs, code, and research."
+    }
+  ]
+}

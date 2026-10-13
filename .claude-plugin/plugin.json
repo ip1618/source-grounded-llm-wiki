@@ -1,0 +1,9 @@
+{
+  "name": "llm-wiki",
+  "version": "0.1.0-beta.1",
+  "description": "Maintain a source-grounded Markdown wiki from project discussions, designs, code, and research.",
+  "author": {
+    "name": "ip1618"
+  },
+  "skills": "./skills/"
+}
